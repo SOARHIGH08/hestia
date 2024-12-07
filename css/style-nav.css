@@ -1,0 +1,31 @@
+.layout-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background: #642d1355;
+	width: 100%;
+	height: 77px;
+
+	padding: 10px 50px;
+
+    backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	
+}
+
+.layout-nav .layout-logo {
+	width: 100px;
+
+	margin-block: auto;
+}
+
+.layout-nav .layout-logo p {
+	color: white;
+    font-size: clamp(.98em, 5vw, 1.2em);
+	text-wrap: nowrap;
+}
+
+

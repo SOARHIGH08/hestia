@@ -1,0 +1,126 @@
+.landing-page .hero-section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--prime-color);
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeBg 5s ease-in forwards;
+}
+
+.landing-page  .hero-text {
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    width: min(90%, 720px);
+}
+    
+.landing-page .hero-text h1 {
+    text-align: center;
+    font-size: clamp(3.2em, 5vw, 5.5em);
+    font-weight: 100;
+    letter-spacing: 5px;
+
+    font-family: 'Great Vibes';
+    animation: fadeText 5s ease-in forwards;
+}
+
+.landing-page .hero-text p {
+    margin: 50px auto;
+    width: 90%;
+
+    font-weight: 300;
+    text-align: center;
+    font-size: clamp(.98em, 5vw, 1.1em);
+    animation: fadeText 5s ease-in forwards;
+
+}
+
+.landing-page .hero-text button {    
+    padding: 15px 20px;
+    background-color: var(--prime-color);
+    color: white;
+    border: 1px solid hsl(19, 66%, 90%);
+    opacity: 0;
+    animation: fadeButton 2s ease-in forwards;
+    animation-delay: 5s;
+}
+
+.landing-page .hero-text button:hover { 
+    background-color: hsl(19, 66%, 26%);
+}
+
+@keyframes fadeBg {
+    0% { 
+        filter: grayscale(100%) blur(0px) brightness(100%);
+    }
+
+    50% { 
+        filter: grayscale(50%) blur(0px);
+    }
+
+    70% { 
+        filter: grayscale(0%) blur(0px);
+    }
+
+    80% {
+        filter: blur(1px);
+    }
+
+    100% { 
+        filter: blur(3px) brightness(130%);
+    }
+}
+
+@keyframes fadeText {
+    0% { 
+        color: var(--prime-color);
+        opacity: 0;
+    }
+
+    50% { 
+        color: #f5eeee;
+        opacity: 1;
+        text-shadow: 1px 1px 3px #000000c5,
+                    0 0 10px #ffffff8d,
+                    0 0 30px black;
+    }
+
+    100% { 
+        color: #f5eeee;
+        opacity: 1;
+        text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.773),
+                    /* 0 0 30px #ffffff8d, */
+                    0 0 40px black,
+                    0 0 50px black;
+    }
+}
+
+@keyframes fadeButton {
+    0% { 
+        color: var(--prime-color);
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    50% { 
+        color: #f5eeee;
+        opacity: 1;
+    }
+
+    100% { 
+        color: #f5eeee;
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.773),
+                    0 0 30px #ffffff8d,
+                    0 0 50px black;
+    }
+}
