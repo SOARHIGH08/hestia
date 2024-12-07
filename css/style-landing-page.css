@@ -75,7 +75,7 @@
     }
 
     100% { 
-        filter: blur(3px) brightness(130%);
+        filter: blur(3px) brightness(80%);
     }
 }
 
